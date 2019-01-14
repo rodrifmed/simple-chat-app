@@ -1,0 +1,11 @@
+<h1>Select Candidate to Chat</h1>
+
+<div>
+    <mat-card style="height: 600px; overflow: scroll;">
+        <mat-nav-list>
+            <mat-list-item (click)="createChat(user.id)" id="createChat" *ngFor="let user of candidates">
+                <div mat-list-item>{{user.email}}</div>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-card>
+</div>

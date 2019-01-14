@@ -1,0 +1,24 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidenav mode="side" opened class="bottom-to-top">
+        <mat-card>Menu</mat-card>
+
+        <mat-nav-list>
+            <mat-list-item>
+                <div mat-list-item>Wallet: {{wallet}}</div>
+            </mat-list-item>
+            <mat-list-item (click)="openCreateChat()" id="createChat" *ngIf="user.role === 'RECRUITER'">
+                <div mat-list-item>New Chat</div>
+            </mat-list-item>
+
+            <mat-list-item *ngFor="let chat of chats" (click)="openChat(chat.id)">
+                <div mat-list-item>{{chat.title}}</div>
+            </mat-list-item>
+            <mat-list-item (click)="logout()">
+                <div mat-list-item>Logout</div>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

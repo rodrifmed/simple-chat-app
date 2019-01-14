@@ -1,0 +1,28 @@
+<h1>Chat COMPONENT</h1>
+
+<div>
+    <mat-card>Selected chat: {{chatId}}</mat-card>
+</div>
+
+<div>
+    <mat-card style="height: 600px; overflow: scroll;">
+        <div>
+            <div *ngFor="let message of chatMessages">
+                {{message.name}} -
+                {{message.timeStamp}} :
+                {{message.message}}
+            </div>
+        </div>
+    </mat-card>
+    <div>
+        <form autocomplete="off" novalidate [formGroup]="form">
+
+            <fieldset>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Send Msg" name="message" formControlName="message">
+                </mat-form-field>
+                <button mat-button (click)="sendMessage()">Send</button>
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<main>
+
+  <div *ngIf="isLoggedOut$ | async">
+    <app-login></app-login>
+  </div>
+
+  <div *ngIf="isLoggedIn$ | async">
+    <app-main></app-main>
+  </div>
+
+</main>
