@@ -39,7 +39,7 @@ async function createChatAndBuildResponse(user: DbUser, candidate: DbUser, db: I
         ids.push(candidate.id);
 
         db.addChatToUsers(chatId, ids);
-        db.updateWallet(user.id.toString(), -1);
+        db.updateWallet(user.id.toString(), -2);
         db.updateWallet(candidate.id.toString(), 1);
         db.updateVitayWallet();
 
