@@ -19,8 +19,8 @@ The project is splited in 2 folders, client and server.
 
 ## Authentication
 
-* Sessionless
-* I'm using JWT with cookie in this project, because of that the way to test the chat is using 2 brownsers.
+* Stateless with JWT
+* I'm using JWT with cookie in this project, because of that, the way to test the chat is using 2 brownsers.
 
 ## Socket.io
 
